@@ -6,12 +6,11 @@
 <img src="Fig/LOGO.png" width="500px"/>
 
 
-Our method takes in one or a few hand-drawn sketches and customizes an off-the-shelf GAN to match the input sketch. While our new model changes an object’s shape and pose, other visual cues such as color, texture, background, are faithfully preserved after the modification.
-<br><br><br>
+<br>
 
-[Baoxiang Pan](https://peterwang512.github.io/)<sup>1</sup>
+[Baoxiang Pan](https://panbaoxiang.github.io/)<sup>1</sup>
 <br> LLNL<sup>1</sup>
-<br>In [JAMES](https://arxiv.org/abs/2108.02774), 2021.
+<br>In [Journal of Advances in Modeling Earth Systems](https://arxiv.org/abs/2108.02774), 2021.
 
 
 ## Motivation
