@@ -1,23 +1,19 @@
 # Regularized Adversarial Domain Adaptation <br /> — data-driven correction of climate model biases
 [**Paper**](https://arxiv.org/abs/2108.02774) | [**Youtube**](https://www.youtube.com/watch?v=1smwQ-tSCjM) 
-
-
-
 <img src="Fig/LOGO.png" width="500px"/>
-
-
 <br>
-
-[Baoxiang Pan](https://panbaoxiang.github.io/)<sup>1</sup>
-<br> LLNL<sup>1</sup>
+Baoxiang Pan<sup>1</sup>, Gemma Anderson<sup>1</sup>, Andre Goncalves<sup>1</sup>, Donald Lucas<sup>1</sup>, Celine Bonfils<sup>1</sup>, Jiwoo Lee<sup>1</sup>, Yang Tian<sup>1</sup>, Hsi-yen Ma<sup>1</sup>
+<br> Lawrence Livermore National Lab<sup>1</sup>
 <br>In [Journal of Advances in Modeling Earth Systems](https://arxiv.org/abs/2108.02774), 2021.
 
 
 ## Motivation
+Climate models often poorly represent the unresolved processes. We apply **adversarial domain adaptation** to identify and correct these biases: 
+We apply discriminative neural networks to distinguish historical climate simulation samples and observation samples. The evidences based on which the
+discriminative neural networks make distinctions are applied to train the domain adaptation neural networks to bias correct climate simulations. 
 
+<br>
 <img src="Fig/Fig_1.png" width="800px"/>
-
-
 
 
 **Interpolation using our customized models.** Latent space interpolation is smooth with our customized models.
