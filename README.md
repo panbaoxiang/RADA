@@ -1,20 +1,18 @@
-# Regularized Adversarial Domain Adaptation - data-driven correction of climate model biases
+# Regularized Adversarial Domain Adaptation <br /> — data-driven correction of climate model biases
  [**Project**](https://peterwang512.github.io/GANSketching/) | [**Paper**](https://arxiv.org/abs/2108.02774) | [**Youtube**](https://www.youtube.com/watch?v=1smwQ-tSCjM)
 
 
 
-<img src="images/teaser_video.gif" width="800px"/>
+<img src="Fig/LOGO.png" width="500px"/>
 
 
 Our method takes in one or a few hand-drawn sketches and customizes an off-the-shelf GAN to match the input sketch. While our new model changes an object’s shape and pose, other visual cues such as color, texture, background, are faithfully preserved after the modification.
 <br><br><br>
 
-[Sheng-Yu Wang](https://peterwang512.github.io/)<sup>1</sup>, [David Bau](https://people.csail.mit.edu/davidbau/home/)<sup>2</sup>, [Jun-Yan Zhu](https://cs.cmu.edu/~junyanz)<sup>1</sup>.
-<br> CMU<sup>1</sup>, MIT CSAIL<sup>2</sup>
-<br>In [ICCV](https://arxiv.org/abs/2108.02774), 2021.
+[Baoxiang Pan](https://peterwang512.github.io/)<sup>1</sup>
+<br> LLNL<sup>1</sup>
+<br>In [JAMES](https://arxiv.org/abs/2108.02774), 2021.
 
-
-**Aug 16 Update** Training code, evaluation code, and dataset are released. Model weights are also updated, please re-run `bash weights/download_weights.sh` if you have downloaded the weights before this update.
 
 
 ## Results
