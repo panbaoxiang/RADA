@@ -16,12 +16,8 @@ Our method takes in one or a few hand-drawn sketches and customizes an off-the-s
 
 ## Motivation
 
-<img src="Fig/Fig_1.png" width="500px"/>
+<img src="Fig/Fig_1.png" width="800px"/>
 
-## Results
-Our method can customize a pre-trained GAN to match input sketches.
-
-<img src="images/teaser.jpg" width="800px"/>
 
 
 
