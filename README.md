@@ -1,10 +1,9 @@
-# Regularized Adversarial Domain Adaptation <br/>  — data-driven correction of climate model biases
-[**Paper**](https://arxiv.org/abs/2108.02774) 
+# Regularized Adversarial Domain Adaptation <br/>  — data-driven correction of climate model biases 
+[**Paper in Journal of Advances in Modeling Earth Systems, 2021**](https://arxiv.org/abs/2108.02774) 
 <img src="Fig/LOGO.png" width="500px"/>
 <br>
 Baoxiang Pan<sup>1</sup>, Gemma Anderson<sup>1</sup>, Andre Goncalves<sup>1</sup>, Donald Lucas<sup>1</sup>, Celine Bonfils<sup>1</sup>, Jiwoo Lee<sup>1</sup>, Yang Tian<sup>1</sup>, Hsi-yen Ma<sup>1</sup>
 <br> Lawrence Livermore National Lab<sup>1</sup>
-<br>In [Journal of Advances in Modeling Earth Systems](https://arxiv.org/abs/2108.02774), 2021.
 
 
 ## Motivation
