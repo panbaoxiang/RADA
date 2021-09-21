@@ -1,4 +1,4 @@
-# Regularized Adversarial Domain Adaptation <br /> — data-driven correction of climate model biases
+# Regularized Adversarial Domain Adaptation <br />  <font size="1"> — data-driven correction of climate model biases</font> 
 [**Paper**](https://arxiv.org/abs/2108.02774) | [**Youtube**](https://www.youtube.com/watch?v=1smwQ-tSCjM) 
 <img src="Fig/LOGO.png" width="500px"/>
 <br>
