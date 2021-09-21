@@ -14,6 +14,9 @@ Our method takes in one or a few hand-drawn sketches and customizes an off-the-s
 <br>In [JAMES](https://arxiv.org/abs/2108.02774), 2021.
 
 
+## Motivation
+
+<img src="Fig/Fig_1.png" width="500px"/>
 
 ## Results
 Our method can customize a pre-trained GAN to match input sketches.
