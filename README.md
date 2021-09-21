@@ -1,5 +1,5 @@
 # Regularized Adversarial Domain Adaptation <br /> — data-driven correction of climate model biases
- [**Project**](https://peterwang512.github.io/GANSketching/) | [**Paper**](https://arxiv.org/abs/2108.02774) | [**Youtube**](https://www.youtube.com/watch?v=1smwQ-tSCjM)
+[**Paper**](https://arxiv.org/abs/2108.02774) | [**Youtube**](https://www.youtube.com/watch?v=1smwQ-tSCjM) 
 
 
 
