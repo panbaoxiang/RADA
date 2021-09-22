@@ -7,16 +7,23 @@ Baoxiang Pan<sup>1</sup>, Gemma Anderson<sup>1</sup>, Andre Goncalves<sup>1</sup
 <br> Lawrence Livermore National Lab<sup>1</sup>
 
 
-## Motivation
-Generative adversarial nets (GANs, Goodfellow et al. 2014) have achieved huge success in generating high-dimensional data samples, such as images, voices, and videos. Besides these conventional generative modeling tasks, there is growing interest in applying GANs to tackle the **domain shift** problem. Here, **domain shift** refers to .
+## Overview
+This work develops the Regularized Adversarial Domain Adaptation (RADA) methodology to correct historical climate projection biases. RADA is built on the
+generative adversarial nets (GANs, Goodfellow et al. 2014), adding various constraints to guarantee phyiscal coherency. The general idea is illustrated as follows:
+<br>
+<img src="Fig/Fig_1.png" width="700px"/>
 
+In the top, GAN is applied to generate cat samples. In the bottom, we make use of the adversarial learning idea to match samples from a source domain (climate simulations), to corresponding samples in a target domain (climate observations). This line of research is often named **domain adaptation** in the machine learning literature. We can not apply supervised learning, since climate is a chaotic system, preventing us from obtaining sufficient paired observation and simulation data to identify and correct climate model biases.
+
+<!-- GANs have achieved huge success in generating high-dimensional data samples, such as images of cat (top). Besides these conventional generative modeling tasks, GANs can also be applied to close the **domain shift** problem. Here, **domain shift** refers to .
 we apply adversarial learning to close the domain shift between climate simulations and historical climate observations.  
 Climate models often poorly represent the unresolved processes. We apply **adversarial domain adaptation** to identify and correct these biases: 
 We apply discriminative neural networks to distinguish historical climate simulation samples and observation samples. The evidences based on which the
-discriminative neural networks make distinctions are applied to train the domain adaptation neural networks to bias correct climate simulations. 
+discriminative neural networks make distinctions are applied to train the domain adaptation neural networks to bias correct climate simulations.  --> 
 
+To guarantee physical coherency, we translate the three requirements Ehret et al. (2012) proposed for a ``perfect'' climate model bias corrector into three regularization terms to the adversarial domain adaption process, namely cycle consistency (Zhu et al. 2017), dynamical consistency (Pan et al. 2019), and dynamical dependency. The final model is illustrated as follows:
 <br>
-<img src="Fig/Fig_1.png" width="800px"/>
+<img src="Fig/fig_2.png" width="900px"/>
 
 ## Methodology
 
