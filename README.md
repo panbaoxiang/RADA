@@ -29,7 +29,8 @@ To guarantee physical coherency, we translate the three requirements Ehret et al
 
 Below we provide guidance for applying RADA to correct the Community Earth System Model version 2 (CESM2, Danabasoglu et al. 2020) daily precipitation projection over the contiguous United States (CONUS).
 
-## Data 
+## Getting started
+### Data 
 
 The Community Earth System Model version 2 (CESM2) historical simulation data are available through https://esgf-node.llnl.gov/projects/cmip6/. 
 
@@ -37,18 +38,25 @@ The CPC unified gauge-based analysis of daily precipitation data are available t
 
 The ECMWF atmospheric reanalysis of the 20th century (ERA-20C) data are available through https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era-20c.
 
-The dynamical variables considered here are sea level pressure, geopotential height and specific humidity at 500hPa. All data are regridded to a common 1 degree resolution, and standardized. To accommodate the long-tail distribution nature of precipitation, we regularize the precipitation data using a natural logarithm transformation. The data processing code 
+The dynamical variables considered here are sea level pressure, geopotential height and specific humidity at 500hPa. All data are regridded to a common 1 degree resolution, and standardized. To accommodate the long-tail distribution nature of precipitation, we regularize the precipitation data using a natural logarithm transformation. The data processing code can be found in Code/Data_Processing.m
 
+### RADA
+#### Dynamical regularization
 
+#### RADA training
 ```bash
 python run_metrics.py --models_list weights/eval_list --output metric_results.csv
 ```
 
+#### Baseline
+
+#### Evaluation
+
 ## Acknowledgments
 
-This repository borrows partially from [SPADE](https://github.com/NVlabs/SPADE), [stylegan2-pytorch](https://github.com/rosinality/stylegan2-pytorch), [PhotoSketch](https://github.com/mtli/PhotoSketch), [GANSpace](https://github.com/harskish/ganspace), and [data-efficient-gans](https://github.com/mit-han-lab/data-efficient-gans).
+This work was performed under the auspices of the U.S. Department of Energy by Lawrence Livermore National Laboratory under contract DE-AC52-07NA27344. Lawrence Livermore National Security, LLC. The views expressed here do not necessarily reflect the opinion of the United States Government, the United States Department of Energy,or Lawrence Livermore National Laboratory. This work was supported by LLNL Laboratory Directed Research and Development project 19-ER-032. This document is released with IM tracking number LLNL-JRNL-817982. 
 
-## Reference
+<!-- ## Reference
 
 If you find this useful for your research, please cite the following work.
 ```
@@ -60,4 +68,4 @@ If you find this useful for your research, please cite the following work.
 }
 ```
 
-Feel free to contact us with any comments or feedback.
+Feel free to contact us with any comments or feedback. -->
