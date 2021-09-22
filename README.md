@@ -1,4 +1,5 @@
-# Regularized Adversarial Domain Adaptation <br/>  — data-driven correction of climate model biases 
+<!-- # Regularized Adversarial Domain Adaptation <br/>  — data-driven correction of climate model biases  -->
+# Learning to correct climate projection biases
 [**Paper in Journal of Advances in Modeling Earth Systems, 2021**](https://arxiv.org/abs/2108.02774) 
 <img src="Fig/LOGO.png" width="500px"/>
 <br>
