@@ -22,10 +22,13 @@ We apply discriminative neural networks to distinguish historical climate simula
 discriminative neural networks make distinctions are applied to train the domain adaptation neural networks to bias correct climate simulations.  --> 
 
 To guarantee physical coherency, we translate the three requirements Ehret et al. (2012) proposed for a ``perfect'' climate model bias corrector into three regularization terms to the adversarial domain adaption process, namely cycle consistency (Zhu et al. 2017), dynamical consistency (Pan et al. 2019), and dynamical dependency. The final model is illustrated as follows:
+
 <br>
 <img src="Fig/fig_2.png" width="900px"/>
 
-## Methodology
+Below we provide guidance for applying RADA to correct the Community Earth System Model version 2 (CESM2, Danabasoglu et al. 2020) daily precipitation projection over the contiguous United States (CONUS).
+
+## Data
 
 ## Methodology
 
