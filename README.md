@@ -1,6 +1,7 @@
 <!-- # Regularized Adversarial Domain Adaptation <br/>  — data-driven correction of climate model biases  -->
 # Learning to correct climate projection biases
 [**Paper in Journal of Advances in Modeling Earth Systems, 2021**](https://arxiv.org/abs/2108.02774) 
+
 <img src="Fig/LOGO.png" width="500px"/>
 <br>
 Baoxiang Pan<sup>1</sup>, Gemma Anderson<sup>1</sup>, Andre Goncalves<sup>1</sup>, Donald Lucas<sup>1</sup>, Celine Bonfils<sup>1</sup>, Jiwoo Lee<sup>1</sup>, Yang Tian<sup>1</sup>, Hsi-yen Ma<sup>1</sup>
@@ -37,6 +38,9 @@ The CPC unified gauge-based analysis of daily precipitation data are available t
 The ECMWF atmospheric reanalysis of the 20th century (ERA-20C) data are available through https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era-20c.
 
 The dynamical variables considered here are sea level pressure, geopotential height and specific humidity at 500hPa. All data are regridded to a common 1 degree resolution, and standardized. To accommodate the long-tail distribution nature of precipitation, we regularize the precipitation data using a natural logarithm transformation. The data processing code 
+# Train on sketches of faces (1024px)
+bash scripts/train_authorsketch_ffhq0.sh
+```
 
 ## Methodology
 
