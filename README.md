@@ -30,7 +30,7 @@ To guarantee physical coherency, we translate the three requirements Ehret et al
 Below we provide guidance for applying RADA to correct the Community Earth System Model version 2 (CESM2, Danabasoglu et al. 2020) daily precipitation projection over the contiguous United States (CONUS).
 
 ## Getting started
-### Data 
+### Obtain the histotical climate simulation and observation data 
 
 The Community Earth System Model version 2 (CESM2) historical simulation data are available through https://esgf-node.llnl.gov/projects/cmip6/. 
 
@@ -38,7 +38,11 @@ The CPC unified gauge-based analysis of daily precipitation data are available t
 
 The ECMWF atmospheric reanalysis of the 20th century (ERA-20C) data are available through https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era-20c.
 
-The dynamical variables considered here are sea level pressure, geopotential height and specific humidity at 500hPa. All data are regridded to a common 1 degree resolution, and standardized. To accommodate the long-tail distribution nature of precipitation, we regularize the precipitation data using a natural logarithm transformation. The data processing code can be found in Code/Data_Processing.m
+Cut, regrid, and normalize the data:
+
+```mathematica
+math -script Data_Processing.m
+```
 
 ### RADA
 #### Dynamical regularization
