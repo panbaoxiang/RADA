@@ -1,0 +1,68 @@
+{nP4Obser,ndynamics4Obser,position,validMatrix,plat4Obser,plon4Obser,dlat4Obser,dlon4Obser}=Import["/usr/workspace/pan11/CycleGAN/Obser/all.mx"];
+(*
+{nP4Obser,ndynamics4Obser,position,validMatrix,plat4Obser,plon4Obser,dlat4Obser,dlon4Obser}=
+        Block[{P,dynamics,position,ndynamics,validMatrix,nP,plat,plon,dlat,dlon},
+        SetDirectory["/usr/workspace/pan11/CycleGAN/Obser"];
+        P=Import["P.mx"]["data"];
+        dynamics=Block[{hus,zg,slp},
+                hus=Block[{tempt=Import["hus.mx"]["data"]},Table[Mean[tempt[[i*8+1;;(i+1)*8]]],{i,0,Length[tempt]/8-1}]];
+                zg=Block[{tempt=Import["zg.mx"]["data"]},Table[Mean[tempt[[i*8+1;;(i+1)*8]]],{i,0,Length[tempt]/8-1}]];
+                slp=Block[{tempt=Import["slp.mx"]["data"]},Table[Mean[tempt[[i*8+1;;(i+1)*8]]],{i,0,Length[tempt]/8-1}]];
+                Transpose[{slp,zg,hus}]];
+        position=Block[{valiMatrix,mP},
+                valiMatrix=Block[{tempt=P[[1]]},Table[If[tempt[[i,j]]<0,0,1],{i,100},{j,236}]];
+                mP=Table[Mean[Flatten[P[[i]]*valiMatrix]],{i,Length[P]}];
+                Position[mP,_?(#>=0.&)][[;;,1]]];
+	position=Select[position,#<=Length[dynamics]&];
+        ndynamics=Block[{tempt=dynamics[[position]]},
+                Transpose[Table[Block[{mean,sigma},
+                                mean=Mean[tempt[[;;,i]]];
+                                sigma=Sqrt[Variance[tempt[[;;,i]]]];
+                        Map[(#-mean)/sigma&,tempt[[;;,i]]]],{i,Dimensions[tempt][[2]]}]]];
+        validMatrix=Block[{tempt1=ArrayResample[P[[1]],{27,48},"Bin"]},
+                Table[If[tempt1[[i,j]]<0,0,1],{i,Length[tempt1]},{j,Dimensions[tempt1][[2]]}]];
+        nP=Block[{tempt},
+                tempt=Map[ArrayResample[#,{27,48},"Bin"]*validMatrix&,P[[position]]];
+                Log[tempt+1.]];
+        plat=Import["P.mx"]["lat"];
+                plon=Import["P.mx"]["lon"];
+                dlat=Import["hus.mx"]["lat"];
+                dlon=Import["hus.mx"]["lon"];
+        {nP,ndynamics,position,validMatrix,plat,plon,dlat,dlon}];
+Export["/usr/workspace/pan11/CycleGAN/Obser/all.mx",{nP4Obser,ndynamics4Obser,position,validMatrix,plat4Obser,plon4Obser,dlat4Obser,dlon4Obser}];
+*)
+
+{nP4GCM,ndynamics4GCM,plat4GCM,plon4GCM,dlat4GCM,dlon4GCM}=Block[{dir,p,np,dynamics,ndynamics,nP,plat,plon,dlat,dlon},
+	dir="/usr/workspace/pan11/CycleGAN/GCM/CESM";
+        SetDirectory[dir];
+        p=Import["P.mx"]["data"];
+        dynamics=Block[{hus,zg,psl},
+                hus=Import["hus.mx"]["data"];
+                zg=Import["zg.mx"]["data"];
+                psl=Import["psl.mx"]["data"];
+                Transpose[{psl,zg[[;;,2]],hus[[;;,2]]}]];
+        ndynamics=Transpose[Table[Block[{mean,sigma},
+                mean=Mean[dynamics[[;;,i]]];
+                sigma=Sqrt[Variance[dynamics[[;;,i]]]];
+                Map[(#-mean)/sigma&,dynamics[[;;,i]]]],{i,Dimensions[dynamics][[2]]}]];
+        nP=Map[#*validMatrix&,Log[p*24*3600+1.]];
+        plat=Import["P.mx"]["lat"];
+		plon=Import["P.mx"]["lon"];
+		dlat=Import["hus.mx"]["lat"];
+		dlon=Import["hus.mx"]["lon"];
+        {nP, ndynamics,plat,plon,dlat,dlon}];
+
+nP4Obser=nP4Obser[[;;,1;;-2]];
+plat4Obser=plat4Obser[[1;;-2]];
+validMatrix=validMatrix[[1;;-2]];
+nP4GCM=nP4GCM[[position,1;;-2]];
+ndynamics4GCM=ndynamics4GCM[[position]];
+plat4GCM=plat4GCM[[1;;-2]];
+nP4GCM=Map[List,nP4GCM];
+nP4Obser=Map[List,nP4Obser];
+length=Length[nP4Obser];
+
+{nP4GCM,nP4Obser,plat4GCM,validMatrix,ndynamics4GCM,ndynamics4Obser}=
+	   {nP4GCM[[;;,;;,26;;1;;-1]],nP4Obser[[;;,;;,26;;1;;-1]],
+		plat4GCM[[26;;1;;-1]],validMatrix[[26;;1;;-1]],
+		ndynamics4GCM[[;;,;;,36;;1;;-1]],ndynamics4Obser[[;;,;;,36;;1;;-1]]};
