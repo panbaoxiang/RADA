@@ -8,6 +8,9 @@ Baoxiang Pan<sup>1</sup>, Gemma Anderson<sup>1</sup>, Andre Goncalves<sup>1</sup
 
 
 ## Motivation
+Generative adversarial nets (GANs, Goodfellow et al. 2014) have achieved huge success in generating high-dimensional data samples, such as images, voices, and videos. Besides these conventional generative modeling tasks, there is growing interest in applying GANs to tackle the **domain shift** problem. Here, **domain shift** refers to .
+
+we apply adversarial learning to close the domain shift between climate simulations and historical climate observations.  
 Climate models often poorly represent the unresolved processes. We apply **adversarial domain adaptation** to identify and correct these biases: 
 We apply discriminative neural networks to distinguish historical climate simulation samples and observation samples. The evidences based on which the
 discriminative neural networks make distinctions are applied to train the domain adaptation neural networks to bias correct climate simulations. 
@@ -15,6 +18,9 @@ discriminative neural networks make distinctions are applied to train the domain
 <br>
 <img src="Fig/Fig_1.png" width="800px"/>
 
+## Methodology
+
+## Methodology
 
 **Interpolation using our customized models.** Latent space interpolation is smooth with our customized models.
 <table cellpadding="0" cellspacing="0" >
