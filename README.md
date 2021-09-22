@@ -44,17 +44,29 @@ Cut, regrid, and normalize the data:
 math -script Data_Processing.m
 ```
 
-### RADA
-#### Dynamical regularization
+#### Train the dynamical regularization module
 
-#### RADA training
-```bash
-python run_metrics.py --models_list weights/eval_list --output metric_results.csv
+```mathematica
+math -script Dynamical_Regularization.m
 ```
 
-#### Baseline
+#### Train the RADA bias corrector
+
+```mathematica
+math -script RADA.m
+```
+
+#### Compare with the baselines
+
+```mathematica
+math -script Baseline/Baseline_n.m
+```
 
 #### Evaluation
+
+```mathematica
+math -script Evaluation.m
+```
 
 ## Acknowledgments
 
